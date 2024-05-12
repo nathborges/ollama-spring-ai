@@ -1,0 +1,11 @@
+spring:
+  ai:
+    ollama:
+      chat:
+        options:
+          model: mistral
+          temperature: 0.3
+      base-url: http://localhost:11434
+  threads:
+    virtual:
+      enabled: true

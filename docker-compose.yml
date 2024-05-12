@@ -1,0 +1,28 @@
+version: '3'
+services:
+  ollama:
+    image: ollama/ollama
+    ports:
+      - "11434:11434"
+    volumes:
+      - ollama_data:/root/.ollama
+    container_name: ollama
+    restart: always
+    networks:
+      - ollama-net
+  chat-application:
+      depends_on:
+        - ollama
+      container_name: chat-application
+      build:
+        context: .
+        dockerfile: Dockerfile
+      image: chat-application:latest
+      ports:
+        - "8080:8080"
+      networks:
+        - ollama-net
+networks:
+  ollama-net:
+volumes:
+  ollama_data:
