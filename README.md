@@ -39,3 +39,17 @@ Now using the `message` request parameter
 ```shell
 curl --get  --data-urlencode 'message=Tell me something about airplanes' localhost:8080/ai/chat 
 ```
+
+# Matrix challenge
+
+This project contains a web service that will accept HTTP GET requests at
+`http://localhost:8080/maxArea`.
+
+Inside OllamaChatController class you can change the matrix, and this endpoint will give you the number of max area.
+
+
+## Access the endpoint
+
+```shell 
+curl localhost:8080/maxArea
+```
