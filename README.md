@@ -1,3 +1,5 @@
+This project uses Maven ([doc to install it](https://maven.apache.org/install.html)) and Java 21.
+
 # Spring AI with Ollama
 
 This project contains a web service that will accept HTTP GET requests at
@@ -46,6 +48,14 @@ This project contains a web service that will accept HTTP GET requests at
 `http://localhost:8080/maxArea`.
 
 Inside OllamaChatController class you can change the matrix, and this endpoint will give you the number of max area.
+
+## Prerequisites
+
+If the project is not running, use the script:
+
+```shell
+sh init.sh
+```
 
 
 ## Access the endpoint
