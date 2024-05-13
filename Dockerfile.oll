@@ -1,3 +1,0 @@
-FROM ollama/ollama:latest
-COPY load-models.sh  load-models.sh
-ENTRYPOINT ["/bin/sh","-c","/load-models.sh"]
